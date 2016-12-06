@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 
 class FinishScreen extends Component {
   constructor() {
@@ -41,12 +42,11 @@ class FinishScreen extends Component {
           F
         </p>
         
-        <div
-          className="finish-button finish-button-non-touch"
-          onClick={this.updateScreen}
-        >
-          Play again
-        </div>
+        <Button 
+          label="Play again"
+          className="finish-button"
+          handleClick={this.updateScreen}
+        />
         
         <a
           id="info-link" 

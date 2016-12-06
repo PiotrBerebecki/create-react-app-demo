@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Button from './Button';
 
 class GameplayScreen extends Component {
   constructor() {
@@ -84,13 +84,12 @@ class GameplayScreen extends Component {
           </section>
           
           <footer>
-            <div id="next-button-container">
-              <div 
-                className="next-button next-button-non-touch"
-                onClick={this.updateScreen}
-              >
-                Next
-              </div>
+            <div id="next-button-container">              
+              <Button 
+                label="Next"
+                className="next-button"
+                handleClick={this.updateScreen}
+              />
             </div>
           </footer>
           

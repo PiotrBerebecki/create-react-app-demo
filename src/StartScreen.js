@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from './Button';
 
 class StartScreen extends Component {
   constructor() {
@@ -25,12 +26,11 @@ class StartScreen extends Component {
     return (
       <div id="start-screen-container" style={{opacity: opacityScreenContainer}}>
         <p>Social Skills Hero</p>
-        <div 
-          className="start-button start-button-non-touch"
-          onClick={this.updateScreen}
-        >
-          Start the game
-        </div>
+        <Button 
+          label="Start the game"
+          className="start-button"
+          handleClick={this.updateScreen}
+        />
       </div>
     );
   }
