@@ -70,9 +70,7 @@ class GameplayScreen extends Component {
     const imageMain = imagesNext[0];
     const imagesGrid = imagesNext.slice(1);
     const { isCheckBoxChecked } = this.state;
-    
-    console.log(isCheckBoxChecked);
-    
+        
     const renderGridImages = imagesGrid.map((image, index) => {
       return (
         <figure className="grid-image-container" key={index}>

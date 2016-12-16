@@ -10,17 +10,16 @@ class Button extends Component {
   }
   
   handleClick() {
-    if (this.state.wasButtonClicked === false) {
-      this.props.handleClick();      
-      
+    if (this.state.wasButtonClicked === false) {      
       this.setState({
         wasButtonClicked: true
       }, () => {
+        this.props.handleClick();
         setTimeout(() => {
           this.setState({
             wasButtonClicked: false
           });
-        }, 280);
+        }, 290);
       });
     }
   }

@@ -20,7 +20,7 @@ class StartScreen extends Component {
     }, 300);
   }
   
-  render() {
+  render() {    
     const { opacityScreenContainer } = this.state;
     
     return (

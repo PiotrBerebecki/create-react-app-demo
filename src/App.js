@@ -95,7 +95,7 @@ class App extends Component {
     }
   }
   
-  render() {
+  render() {    
     switch(this.state.screen) {
       case 'start':
         return <StartScreen updateScreen={this.updateScreen}/>;
