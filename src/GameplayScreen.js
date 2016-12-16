@@ -5,9 +5,12 @@ class GameplayScreen extends Component {
   constructor() {
     super();
     this.updateScreen = this.updateScreen.bind(this);
+    this.handleCheckBoxChange = this.handleCheckBoxChange.bind(this);
+    
     this.state = {
       opacityScreenContainer: 0,
-      opacityImage: 1
+      opacityImage: 1,
+      isCheckBoxChecked: [false, false, false, false]
     };
   }
   
@@ -33,6 +36,7 @@ class GameplayScreen extends Component {
       
       setTimeout(() => {
         this.setState({
+          isCheckBoxChecked: this.state.isCheckBoxChecked.map(isChecked => false),
           opacityImage: 1
         });
       }, 310);
@@ -48,15 +52,36 @@ class GameplayScreen extends Component {
     }
   }
   
+  handleCheckBoxChange(e) {
+    const index = Number(e.target.id);
+    const { isCheckBoxChecked } = this.state;
+    
+    this.setState({
+      isCheckBoxChecked: [
+        ...isCheckBoxChecked.slice(0, index),
+        !isCheckBoxChecked[index],
+        ...isCheckBoxChecked.slice(index + 1)
+      ]
+    });
+  }
+  
   render() {
     const { imagesNext } = this.props;
     const imageMain = imagesNext[0];
     const imagesGrid = imagesNext.slice(1);
+    const { isCheckBoxChecked } = this.state;
+    
+    console.log(isCheckBoxChecked);
     
     const renderGridImages = imagesGrid.map((image, index) => {
       return (
         <figure className="grid-image-container" key={index}>
-          <input type="checkbox" id={`checkbox${index.toString()}`}/>
+          <input
+            type="checkbox" 
+            id={index}
+            checked={isCheckBoxChecked[index]}
+            onChange={this.handleCheckBoxChange}
+          />
           <img className="grid-image" src={image.src} alt={image.src}/>
         </figure>
       );
