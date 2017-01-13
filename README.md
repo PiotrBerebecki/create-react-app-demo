@@ -15,6 +15,7 @@ Live version: https://piotrberebecki.github.io/social-skills-hero-react/
 ### Development technologies and techniques
 ---
 
+* React Create App - Developing and react apps with no build configuration.
 * Image preloading - Images that will be displayed on the next screen are preloaded to ensure a smoother user experience.
 * Material design - The principles of material design have been followed in order to improve accessibility and usability.
 * ES6 - Effort has been made to use the latest features of the JavaScript language. This includes for example: [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) and [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const); [arrow functions](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions); [destructuring assignment](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
@@ -24,9 +25,11 @@ Live version: https://piotrberebecki.github.io/social-skills-hero-react/
 ### Running the app in your local environment
 ---
 
-Clone the repository
+Clone the repository and install dependencies
 ```
 $ git clone https://github.com/PiotrBerebecki/social-skills-hero-react.git
 $ cd social-skills-hero-react
+$ npm install
+$ npm start
 ```
-Open the `index.html` file in your browser
+Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
