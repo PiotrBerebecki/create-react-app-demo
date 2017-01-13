@@ -50,7 +50,7 @@ class FinishScreen extends Component {
         
         <a
           id="info-link" 
-          href="https://github.com/PiotrBerebecki/captcha-game" target="_blank"
+          href="https://github.com/PiotrBerebecki/social-skills-hero-react" target="_blank"
         >
           <i className="fa fa-external-link"></i>
           <span>About this app</span>
